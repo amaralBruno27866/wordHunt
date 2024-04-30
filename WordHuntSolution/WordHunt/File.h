@@ -13,6 +13,8 @@ using std::filesystem::path;
 namespace hunting {
 	class File {
 	private:
+		File* f_list;
+		int f_totalResult;
 		bool f_isOpen;
 		bool f_isSave;
 		string f_keyword;

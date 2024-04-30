@@ -8,10 +8,22 @@ using namespace std;
 namespace hunting {
 	Email::Email()
 	{
+		e_sender = "";
+		e_recipient = "";
+		e_subjetc = "";
+		e_body = "";
+		e_dateSent = Time();
+		e_dateReceived = Time();
 	}
 
 	Email::Email(string sender, string recipient, string subject, string body, Time dateSent, Time dateReceived)
 	{
+		e_sender = sender;
+		e_recipient = recipient;
+		e_subjetc = subject;
+		e_body = body;
+		e_dateSent = dateSent;
+		e_dateReceived = dateReceived;
 	}
 
 	Email::Email(const Email& email)
@@ -64,11 +76,11 @@ namespace hunting {
 
 	Time Email::getDateSent() const
 	{
-		return Time();
+		return e_dateSent;
 	}
 
 	Time Email::getDateReceived() const
 	{
-		return Time();
+		return e_dateReceived;
 	}
 }
